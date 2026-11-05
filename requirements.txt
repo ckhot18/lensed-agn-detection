@@ -1,0 +1,13 @@
+# Core stack. Install torch/torchvision with the command from pytorch.org if you need a CUDA build.
+numpy
+pandas
+scipy
+scikit-learn
+astropy
+matplotlib
+torch
+torchvision
+pyyaml
+tqdm
+pytest
+ipykernel

@@ -1,1 +1,11 @@
-.venv
+# Large or generated research artifacts: never commit raw data or model outputs.
+data/
+models/
+logs/
+*.fits
+*.zip
+*.npy
+*.pt
+.venv/
+__pycache__/
+.ipynb_checkpoints/

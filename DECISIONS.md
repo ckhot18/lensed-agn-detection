@@ -40,3 +40,9 @@ every surprising result. Do not edit old entries; add a new one that supersedes.
   Phases 5-8 all on main with the same splits.
 - Why: small holdout is ~600 objects, too few for TPR@FPR=1e-3; all experiment comparisons must share one data source (H3).
 - Impact: small-dataset numbers are for debugging only, never reported next to main results.
+
+### D-008 | phase 0 | 2026-11-05 | no
+- Decision: Use `data/raw` as the small-data root via `LENS_DATA_ROOT` for local commands.
+- Options considered: hard-coded filesystem path versus the configured environment variable.
+- Why: keeps code portable and preserves the raw-data read-only boundary.
+- Impact / how to undo: set `LENS_DATA_ROOT` to another unzipped dataset before running commands.

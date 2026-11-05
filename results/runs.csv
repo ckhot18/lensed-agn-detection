@@ -1,0 +1,1 @@
+run_id,phase,exp,model,pretrained,bands,train_pipelines,eval_pipeline,data_source,seed,auc,ap,tpr_fpr1e2,tpr_fpr1e3,commit,notes

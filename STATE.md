@@ -1,18 +1,18 @@
 # STATE.md — handoff file (agent: OVERWRITE sections, keep it short; <= 80 lines)
 Any agent must be able to continue from this file alone.
 
-Last updated: (date, agent name)
-Last commit: (hash)
+Last updated: 2026-11-05, Codex
+Last commit: HEAD (phase-0 checkpoint)
 
 ## Now
 Current phase: 0
-Status: not started
-Next action: (one specific sentence another agent could execute)
+Status: complete
+Next action: do phase 1
 
 ## Phase tracker
 | Phase | Name                              | Status      |
 |-------|-----------------------------------|-------------|
-| 0     | Scaffold + environment            | not started |
+| 0     | Scaffold + environment            | complete    |
 | 1     | Data inspection                   | not started |
 | 2     | Dataset, splits, leakage tests    | not started |
 | 3     | Baselines + shortcut checks       | not started |
@@ -36,10 +36,10 @@ Next action: (one specific sentence another agent could execute)
 - Realistic validation set released? UNKNOWN
 
 ## Environment
-- Data source in use (small | main | per-band): UNKNOWN
-- LENS_DATA_ROOT: UNKNOWN
-- Python / torch / GPU: UNKNOWN
-- Commands that work: (list the 3-5 most useful)
+- Data source in use (small | main | per-band): small
+- LENS_DATA_ROOT: D:\\Research\\lensed-agn-detection\\data\\raw (exists; 20,000 FITS files)
+- Python / torch / GPU: Python 3.12.10; torch 2.15.0+cpu; CUDA unavailable; astropy 8.0.2; sklearn 1.9.1
+- Commands that work: `$env:LENS_DATA_ROOT=(Join-Path (Get-Location) 'data/raw'); .\\.venv\\Scripts\\python.exe src/check_env.py`; `.\\.venv\\Scripts\\python.exe -m pytest`
 
 ## Open issues / blockers
 - none

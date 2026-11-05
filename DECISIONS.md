@@ -52,3 +52,9 @@ every surprising result. Do not edit old entries; add a new one that supersedes.
 - Options considered: infer unprovided truth-table categories versus record them as unavailable.
 - Why: the supplied small source contains FITS files only; inference would invent labels.
 - Impact / how to undo: enrich the manifest after an official truth table is supplied.
+
+### D-010 | phase 2 | 2026-11-05 | LOCKED
+- Decision: Use seeded 70/15/15 object-level splits, stratified by pipeline and filename class.
+- Options considered: file-level or unseeded splits versus one saved object split.
+- Why: each stratum has 1,000 objects, producing exact 700/150/150 counts with no band leakage.
+- Impact / how to undo: requires explicit owner approval and a new documented split file.

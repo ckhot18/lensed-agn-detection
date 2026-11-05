@@ -1,0 +1,9 @@
+# Phase 2 split recipe. Changing any value requires making a new, documented split.
+data_source: small
+manifest: data/manifest/manifest.csv
+output: splits/splits.csv
+seed: 20261105
+fractions:
+  train: 0.70
+  val: 0.15
+  holdout: 0.15

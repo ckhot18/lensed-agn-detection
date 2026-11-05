@@ -2,18 +2,18 @@
 Any agent must be able to continue from this file alone.
 
 Last updated: 2026-11-05, Codex
-Last commit: HEAD (phase-0 checkpoint)
+Last commit: HEAD (phase-1 checkpoint pending)
 
 ## Now
-Current phase: 0
-Status: complete
-Next action: do phase 1
+Current phase: 1
+Status: awaiting owner figure review and count-discrepancy clarification
+Next action: Obtain owner confirmation of the Phase 1 figures and the main-dataset count discrepancy.
 
 ## Phase tracker
 | Phase | Name                              | Status      |
 |-------|-----------------------------------|-------------|
 | 0     | Scaffold + environment            | complete    |
-| 1     | Data inspection                   | not started |
+| 1     | Data inspection                   | awaiting owner review |
 | 2     | Dataset, splits, leakage tests    | not started |
 | 3     | Baselines + shortcut checks       | not started |
 | 4     | Small CNN baseline                | not started |
@@ -25,11 +25,11 @@ Next action: do phase 1
 | 10    | Write-up + polish                 | not started |
 
 ## Verified facts (fill ONLY after inspecting; otherwise leave UNKNOWN)
-- Cutout size (H x W): UNKNOWN
-- FITS layout (image in primary HDU? table column?): UNKNOWN
-- dtype / units: UNKNOWN
-- Objects per simset, total: UNKNOWN (note says 100k training images but also 50k x 4 simsets: resolve)
-- Label tables: columns, doubles/quads flag, contaminant type: UNKNOWN
+- Cutout size (H x W): 41 x 41 (inspected D1 lens, D1 non-lens, D2 lens)
+- FITS layout (image in primary HDU? table column?): one 2-D image in the primary HDU; no extensions in inspected files
+- dtype / units: FITS big-endian float64; units are not recorded in inspected headers
+- Objects per simset, total: small source = 4,000 objects / 20,000 files (1,000 each D1_L, D1_N, D2_L, D2_N). Guide confirms 4,000 small; main 50k x 4 would be 200k, so the separate “100k training images” claim is unverified here.
+- Label tables: no truth/label table is supplied in raw small data or project metadata; filename L/N is the only label. Doubles/quads and contaminant types are not available.
 - Official metric: UNKNOWN
 - Submission format: UNKNOWN
 - Test set released? UNKNOWN (site said "generated soon")
@@ -42,4 +42,4 @@ Next action: do phase 1
 - Commands that work: `$env:LENS_DATA_ROOT=(Join-Path (Get-Location) 'data/raw'); .\\.venv\\Scripts\\python.exe src/check_env.py`; `.\\.venv\\Scripts\\python.exe -m pytest`
 
 ## Open issues / blockers
-- none
+- Owner figure review pending. Main-data count discrepancy cannot be resolved from the supplied small dataset or metadata.

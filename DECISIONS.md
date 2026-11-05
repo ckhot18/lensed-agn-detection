@@ -46,3 +46,9 @@ every surprising result. Do not edit old entries; add a new one that supersedes.
 - Options considered: hard-coded filesystem path versus the configured environment variable.
 - Why: keeps code portable and preserves the raw-data read-only boundary.
 - Impact / how to undo: set `LENS_DATA_ROOT` to another unzipped dataset before running commands.
+
+### D-009 | phase 1 | 2026-11-05 | no
+- Decision: Store one manifest row per object and use filename L/N labels only.
+- Options considered: infer unprovided truth-table categories versus record them as unavailable.
+- Why: the supplied small source contains FITS files only; inference would invent labels.
+- Impact / how to undo: enrich the manifest after an official truth table is supplied.

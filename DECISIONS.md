@@ -58,3 +58,9 @@ every surprising result. Do not edit old entries; add a new one that supersedes.
 - Options considered: file-level or unseeded splits versus one saved object split.
 - Why: each stratum has 1,000 objects, producing exact 700/150/150 counts with no band leakage.
 - Impact / how to undo: requires explicit owner approval and a new documented split file.
+
+### D-011 | maintenance | 2026-11-05 | no
+- Decision: Add repository documentation, editor settings, and test CI before Phase 10.
+- Options considered: defer polish per the original phase plan versus explicit owner authorization now.
+- Why: owner requested an immediate professional repository baseline without changing research behavior.
+- Impact / how to undo: remove documentation and CI files; model/data protocol is unchanged.

@@ -2,7 +2,7 @@
 Any agent must be able to continue from this file alone.
 
 Last updated: 2026-11-05, Codex
-Last commit: HEAD (phase-2 checkpoint pending)
+Last commit: HEAD (maintenance checkpoint pending)
 
 ## Now
 Current phase: 2
